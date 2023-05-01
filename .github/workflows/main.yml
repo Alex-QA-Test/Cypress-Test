@@ -9,7 +9,7 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and Cypress run
       # https://github.com/cypress-io/github-action
-      - name: npx cypress run --browser chrome
+      - name: Cypress run
         uses: cypress-io/github-action@v5
         with: 
           browser: chrome
