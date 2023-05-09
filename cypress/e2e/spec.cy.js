@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-//let TEST_URL = Cypress.env('TEST_URL')
+const TEST_URL = Cypress.env('TEST_URL')
 describe('template spec', () => {
   it('passes', () => {
     cy.visit('TEST_URL')
