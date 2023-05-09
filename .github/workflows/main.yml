@@ -3,19 +3,21 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
-    environment: Production
-    env:
-      TEST_URL: ${{ secrets.TEST_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
       # and Cypress run
       # https://github.com/cypress-io/github-action
+      - name: Set environment variables
+        run: |
+          export TEST_URL=$TEST_URL
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with: 
           browser: chrome
+        env:
+          TEST_URL: ${{ secrets.TEST_URL }}
           
       - name: Upload Cypress test reports
         uses: actions/upload-artifact@v3
