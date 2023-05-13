@@ -3,8 +3,10 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+    environment: Production
     env:
       TEST_URL: ${{ secrets.TEST_URL }}
+      TEST: ${{ secrets.TEST }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
