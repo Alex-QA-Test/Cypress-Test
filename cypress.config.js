@@ -6,7 +6,7 @@ module.exports = defineConfig({
 },
   e2e: {
     env: { 
-    URL: 'TEST_URL',
+    URL: TEST_URL,
 },
     setupNodeEvents(on, config) {
       // implement node event listeners here
