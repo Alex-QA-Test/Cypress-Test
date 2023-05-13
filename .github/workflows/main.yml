@@ -11,7 +11,7 @@ jobs:
       # https://github.com/cypress-io/github-action
       - name: Write the cypress.env.json file 📝
         run: |
-          echo '${{ secrets.TEST_URL }}'
+          echo '${{ secrets.TEST }}'
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with: 
