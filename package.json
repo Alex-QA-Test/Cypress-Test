@@ -4,7 +4,7 @@
   }, 
 
   "scripts": {
-    "my test": "npx cypress run --env test_url=${{ secrets.TEST_URL }} --browser chrome"
+    "my test": "npx cypress run --env test_url=${{ secrets.TEST_URL }}"
   }
   
 }
