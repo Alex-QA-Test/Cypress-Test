@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit(Cypress.env('URL'))
+    cy.visit(Cypress.env('TEST_URL')
     cy.get('h1').should('text', 'Kitchen Sink')
     cy.get('a').should('include.text', 'Querying')
   })
