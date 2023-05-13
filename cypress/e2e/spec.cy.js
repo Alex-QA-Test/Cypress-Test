@@ -1,8 +1,7 @@
 /// <reference types="Cypress" />
-const mySecret = Cypress.env('TEST_URL')
+const mySecret = Cypress.env('test_url')
 describe('template spec', () => {
   it('passes', () => {
-     const mySecret = Cypress.env('TEST_URL')
      cy.log(mySecret)
     cy.log('23454356')
    /* cy.visit(mySecret)
