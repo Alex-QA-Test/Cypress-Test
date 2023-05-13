@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-22.04
     environment: Production
     env:
-        TEST_URL: ${{ secrets.TEST_URL }}
+        CYPRESS_SECRET_VALUE: ${{ secrets.CYPRESS_SECRET_VALUE }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
