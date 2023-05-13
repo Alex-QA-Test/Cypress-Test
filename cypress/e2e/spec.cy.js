@@ -2,7 +2,7 @@
 describe('template spec', () => {
   it('passes', () => {
      const mySecret = Cypress.env('URL')
-     const mySecret1 = Cypress.env('TEST')
+     const mySecret1 = Cypress.env('TEST_URL')
      cy.log(mySecret)
     cy.log(mySecret1)
     cy.log('23454356')
