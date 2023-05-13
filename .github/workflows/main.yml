@@ -3,10 +3,6 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
-    environment: Production
-    env:
-      TEST_URL: ${{ secrets.TEST_URL }}
-      TEST: ${{ secrets.TEST }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -15,7 +11,9 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with: 
-          browser: chrome
+          browser: chrome 
+        env:
+          TEST_URL: ${{ secrets.TEST_URL }}
           
       - name: Upload Cypress test reports
         uses: actions/upload-artifact@v3
