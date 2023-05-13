@@ -6,6 +6,7 @@ jobs:
     environment: Production
     env:
       TEST_URL: ${{ secrets.TEST_URL }}
+      TEST: ${{ secrets.TEST }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
