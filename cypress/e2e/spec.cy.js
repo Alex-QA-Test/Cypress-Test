@@ -2,7 +2,9 @@
 describe('template spec', () => {
   it('passes', () => {
      const mySecret = Cypress.env('URL')
+     const mySecret1 = Cypress.env('TEST')
      cy.log(mySecret)
+    cy.log(mySecret1)
     cy.log('23454356')
    /* cy.visit(mySecret)
     cy.get('h1').should('text', 'Kitchen Sink')
