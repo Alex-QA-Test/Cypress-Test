@@ -3,6 +3,9 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+     environment: Production
+     env:
+        CYPRESS_SECRET_VALUE: ${{ secrets.CYPRESS_SECRET_VALUE }}
     timeout-minutes: 5
 
     steps:
